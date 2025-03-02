@@ -1,0 +1,24 @@
+{
+  "name": "zenpro-playwright",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "cross-env ENV=prod FORCE_COLOR=0 cucumber-js --config=config/cucumber.js || true",
+    "posttest": "npx ts-node src/helper/report/reports.ts ",
+    "test-failed": "cucumber-js -p rerun @rerun.txt"
+  },
+  "keywords": [],
+  "author": "Leah",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@cucumber/cucumber": "^11.2.0",
+    "@playwright/test": "^1.50.1",
+    "@types/node": "^22.13.4",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.4.7",
+    "multiple-cucumber-html-reporter": "^3.9.2",
+    "ts-node": "^10.9.2",
+    "winston": "^3.17.0"
+  }
+}
